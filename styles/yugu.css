@@ -1,0 +1,120 @@
+* {
+  /* box-sizing: border-box;
+  list-style: none; */
+  margin: 0px;
+  padding: 0px;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    color:#434444;
+}
+
+p{
+  letter-spacing: 0.25em;
+  line-height: 1.5em;
+}
+
+@keyframes pageAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+body{
+  opacity: 0;
+  animation: pageAnimation 1.5s ease;
+  /* animation-delay: 2.0s; */
+  animation-fill-mode:forwards;
+}
+
+
+ul{
+  list-style-type: none;
+}
+
+/* スマホ画面用 */
+@media screen and (max-width: 799px) {
+  .main-header {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  ul {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .main-header img {
+    width: 100%;
+  }
+
+  .yugu-list{
+    text-align: center;
+  }
+
+  .yugu-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  iframe {
+    width: 70vw;
+    height: calc(70vw * 0.56);
+  }
+
+  .yugu-text {
+    width: 70vw;
+  }
+  
+}
+
+
+/* PC画面用 */
+@media screen and (min-width: 800px) {
+
+  .yugu-main {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .yugu-list li .yugu-column{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+  }
+
+  .yugu-list li:nth-child(even) .yugu-column{
+    flex-direction: row-reverse;
+  }
+
+  .yugu-column iframe {
+    padding: 20px;
+  }
+
+  iframe {
+    width: 30vw;
+    height: calc(30vw * 0.56);
+  }
+
+  .yugu-text {
+    padding: 20px;
+    max-width: 400px;
+  }
+}
+
+
+
+
+
